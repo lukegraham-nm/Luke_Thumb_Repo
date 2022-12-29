@@ -1435,8 +1435,6 @@
 					<Item Name="lvSimController.dll" Type="Document" URL="/&lt;vilib&gt;/rvi/Simulation/lvSimController.dll"/>
 					<Item Name="FxpSim.dll" Type="Document" URL="/&lt;vilib&gt;/rvi/FXPMathLib/sim/FxpSim.dll"/>
 				</Item>
-				<Item Name="AllWindowsClust.ctl" Type="VI" URL="../Host/Clusts/AllWindowsClust.ctl"/>
-				<Item Name="ChannelWindowClust.ctl" Type="VI" URL="../Host/Clusts/ChannelWindowClust.ctl"/>
 			</Item>
 			<Item Name="Build Specifications" Type="Build">
 				<Item Name="Multirecord Acquisition (NI PXIe-5172 8CH 410T)" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
@@ -1522,6 +1520,8 @@ _1) Added second FIFO channel.</Property>
 		<Item Name="AllWindowsClust.ctl" Type="VI" URL="../Host/Clusts/AllWindowsClust.ctl"/>
 		<Item Name="ProgrammaticBuildBuild.vi" Type="VI" URL="../Host/ProgrammaticBuildBuild.vi"/>
 		<Item Name="Group Data and Triggers for Display 20221121.vi" Type="VI" URL="../Host/Sub VIs/Group Data and Triggers for Display 20221121.vi"/>
+		<Item Name="Configured Acquisition Trigger (Host)_20221229_Dual.vi" Type="VI" URL="../Host/Configured Acquisition Trigger (Host)_20221229_Dual.vi"/>
+		<Item Name="Channel Numbers.ctl" Type="VI" URL="../Host/Enums/Channel Numbers.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="instr.lib" Type="Folder">
 				<Item Name="niInstr Multirecord Acquisition v1 Host.lvclass" Type="LVClass" URL="/&lt;instrlib&gt;/_niInstr/Multirecord Acquisition/Interface/v1/Host/niInstr Multirecord Acquisition v1 Host.lvclass"/>
@@ -1620,6 +1620,7 @@ _1) Added second FIFO channel.</Property>
 			<Item Name="nimrecacqu.dll" Type="Document" URL="/&lt;resource&gt;/nimrecacqu.dll"/>
 			<Item Name="provcom_StringGlobals.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_StringGlobals.vi"/>
 			<Item Name="Multirecord Acquisition FPGA_20221228a.lvbitx" Type="Document" URL="../FPGA Bitfiles/Multirecord Acquisition FPGA_20221228a.lvbitx"/>
+			<Item Name="Multirecord Acquisition FPGA_20221228a_1.lvbitx" Type="Document" URL="../FPGA Bitfiles/Multirecord Acquisition FPGA_20221228a_1.lvbitx"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Delete" Type="EXE">
