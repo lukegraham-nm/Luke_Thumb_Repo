@@ -1,0 +1,7 @@
+Running: xsim.dir/Step4_1_LowPass_Decimate_3CE652926F5B43F18022D1349C670FA0/xsimk_3CE652926F5B43F18022D1349C670FA0.dll -log xsiSetupLog
+Design successfully loaded
+Design Loading Memory Usage: 254680 KB (Peak: 254680 KB)
+Design Loading CPU Usage: 931671 ms
+Simulation completed
+Simulation Memory Usage: 254680 KB (Peak: 254680 KB)
+Simulation CPU Usage: 931671 ms

@@ -1,0 +1,7 @@
+Running: xsim.dir/StageA_00_BandPass_3CE652926F5B43F18022D1349C670FA0/xsimk_3CE652926F5B43F18022D1349C670FA0.dll -log xsiSetupLog
+Design successfully loaded
+Design Loading Memory Usage: 308380 KB (Peak: 308380 KB)
+Design Loading CPU Usage: 68561 ms
+Simulation completed
+Simulation Memory Usage: 308380 KB (Peak: 308380 KB)
+Simulation CPU Usage: 68561 ms

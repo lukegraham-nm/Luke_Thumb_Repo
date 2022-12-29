@@ -1,0 +1,8 @@
+C:\Program Files\National Instruments\LabVIEW 2018\vi.lib\addons\h5labview2\group\H5Gopen.vi (H5G.lvlib:H5Gopen.vi)
+    - The VI expected to be at "C:\Users\Bruce Wayne\Desktop\ATA_Source_20220226_Blue\Epimedia_Connex_Source\HDF5\lib_path_mod_20200519.vi" was loaded from "C:\Users\Bruce Wayne\Desktop\ATA_Source_20220325_Blue\Epimedia_Connex_Source\HDF5\lib_path_mod_20200519.vi".
+C:\Program Files\National Instruments\LabVIEW 2018\vi.lib\addons\h5labview2\base\H5Lexists.vi (H5Lexists.vi)
+    - The VI expected to be at "C:\Users\Bruce Wayne\Desktop\ATA_Source_20220226_Blue\Epimedia_Connex_Source\HDF5\lib_path_mod_20200519.vi" was loaded from "C:\Users\Bruce Wayne\Desktop\ATA_Source_20220325_Blue\Epimedia_Connex_Source\HDF5\lib_path_mod_20200519.vi".
+C:\Program Files\National Instruments\LabVIEW 2018\vi.lib\addons\h5labview2\props\H5Pclose.vi (H5P.lvlib:H5Pclose.vi)
+    - The VI expected to be at "C:\Users\Bruce Wayne\Desktop\ATA_Source_20220226_Blue\Epimedia_Connex_Source\HDF5\lib_path_mod_20200519.vi" was loaded from "C:\Users\Bruce Wayne\Desktop\ATA_Source_20220325_Blue\Epimedia_Connex_Source\HDF5\lib_path_mod_20200519.vi".
+C:\Program Files\National Instruments\LabVIEW 2018\vi.lib\addons\h5labview2\props\H5Pcreate.vi (H5P.lvlib:H5Pcreate.vi)
+    - The VI expected to be at "C:\Users\Bruce Wayne\Desktop\ATA_Source_20220226_Blue\Epimedia_Connex_Source\HDF5\lib_path_mod_20200519.vi" was loaded from "C:\Users\Bruce Wayne\Desktop\ATA_Source_20220325_Blue\Epimedia_Connex_Source\HDF5\lib_path_mod_20200519.vi".

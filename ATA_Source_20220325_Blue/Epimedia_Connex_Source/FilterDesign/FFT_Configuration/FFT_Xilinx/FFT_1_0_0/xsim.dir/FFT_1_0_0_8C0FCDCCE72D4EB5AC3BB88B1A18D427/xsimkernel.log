@@ -1,0 +1,7 @@
+Running: xsim.dir/FFT_1_0_0_8C0FCDCCE72D4EB5AC3BB88B1A18D427/xsimk_8C0FCDCCE72D4EB5AC3BB88B1A18D427.dll -log xsiSetupLog
+Design successfully loaded
+Design Loading Memory Usage: 233492 KB (Peak: 233492 KB)
+Design Loading CPU Usage: 57124 ms
+Simulation completed
+Simulation Memory Usage: 233492 KB (Peak: 233492 KB)
+Simulation CPU Usage: 57124 ms
