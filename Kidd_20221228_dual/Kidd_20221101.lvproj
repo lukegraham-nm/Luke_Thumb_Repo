@@ -1478,9 +1478,10 @@
 				<Item Name="Multirecord Acquisition FPGA_20221228a" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
 					<Property Name="AllowEnableRemoval" Type="Bool">true</Property>
 					<Property Name="BuildSpecDecription" Type="Str">Consolidate trigger and FIFO code into subVI.
-_1) Added second FIFO channel.</Property>
+_1) Added second FIFO channel.
+_2)Added channel mask to FIFO write. (Only single channel written to each FIFO)</Property>
 					<Property Name="BuildSpecName" Type="Str">Multirecord Acquisition FPGA_20221228a</Property>
-					<Property Name="Comp.BitfileName" Type="Str">Multirecord Acquisition FPGA_20221228a_1.lvbitx</Property>
+					<Property Name="Comp.BitfileName" Type="Str">Multirecord Acquisition FPGA_20221228a_2.lvbitx</Property>
 					<Property Name="Comp.CustomXilinxParameters" Type="Str"></Property>
 					<Property Name="Comp.MaxFanout" Type="Int">-1</Property>
 					<Property Name="Comp.RandomSeed" Type="Bool">false</Property>
@@ -1504,9 +1505,9 @@ _1) Added second FIFO channel.</Property>
 					<Property Name="Comp.Xilinx.UseRecommended" Type="Bool">true</Property>
 					<Property Name="DefaultBuildSpec" Type="Bool">true</Property>
 					<Property Name="DestinationDirectory" Type="Path">FPGA Bitfiles</Property>
-					<Property Name="NI.LV.FPGA.LastCompiledBitfilePath" Type="Path">/D/Kidd_20221228_dual/FPGA Bitfiles/Multirecord Acquisition FPGA_20221228a_1.lvbitx</Property>
-					<Property Name="NI.LV.FPGA.LastCompiledBitfilePathRelativeToProject" Type="Path">FPGA Bitfiles/Multirecord Acquisition FPGA_20221228a_1.lvbitx</Property>
-					<Property Name="ProjectPath" Type="Path">/D/Kidd_20221228_dual/Kidd_20221101.lvproj</Property>
+					<Property Name="NI.LV.FPGA.LastCompiledBitfilePath" Type="Path">/D/Luke_Thumb_Repo/Kidd_20221228_dual/FPGA Bitfiles/Multirecord Acquisition FPGA_20221228a_2.lvbitx</Property>
+					<Property Name="NI.LV.FPGA.LastCompiledBitfilePathRelativeToProject" Type="Path">FPGA Bitfiles/Multirecord Acquisition FPGA_20221228a_2.lvbitx</Property>
+					<Property Name="ProjectPath" Type="Path">/D/Luke_Thumb_Repo/Kidd_20221228_dual/Kidd_20221101.lvproj</Property>
 					<Property Name="RelativePath" Type="Bool">true</Property>
 					<Property Name="RunWhenLoaded" Type="Bool">false</Property>
 					<Property Name="SupportDownload" Type="Bool">true</Property>
@@ -1620,7 +1621,7 @@ _1) Added second FIFO channel.</Property>
 			<Item Name="nimrecacqu.dll" Type="Document" URL="/&lt;resource&gt;/nimrecacqu.dll"/>
 			<Item Name="provcom_StringGlobals.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_StringGlobals.vi"/>
 			<Item Name="Multirecord Acquisition FPGA_20221228a.lvbitx" Type="Document" URL="../FPGA Bitfiles/Multirecord Acquisition FPGA_20221228a.lvbitx"/>
-			<Item Name="Multirecord Acquisition FPGA_20221228a_1.lvbitx" Type="Document" URL="../FPGA Bitfiles/Multirecord Acquisition FPGA_20221228a_1.lvbitx"/>
+			<Item Name="Multirecord Acquisition FPGA_20221228a_2.lvbitx" Type="Document" URL="../FPGA Bitfiles/Multirecord Acquisition FPGA_20221228a_2.lvbitx"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Delete" Type="EXE">
