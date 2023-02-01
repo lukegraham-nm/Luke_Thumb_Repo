@@ -33,6 +33,10 @@
 			<Item Name="Format Waveform Graph.vi" Type="VI" URL="../Host/Sub VIs/Format Waveform Graph.vi"/>
 			<Item Name="Format Multi Waveform Graph.vi" Type="VI" URL="../Host/Sub VIs/Format Multi Waveform Graph.vi"/>
 			<Item Name="Scale Window Trigger 20221110.vi" Type="VI" URL="../Host/Sub VIs/Scale Window Trigger 20221110.vi"/>
+			<Item Name="ChannelWindowClust.ctl" Type="VI" URL="../Host/Clusts/ChannelWindowClust.ctl"/>
+			<Item Name="AllWindowsClust.ctl" Type="VI" URL="../Host/Clusts/AllWindowsClust.ctl"/>
+			<Item Name="Group Data and Triggers for Display 20221121.vi" Type="VI" URL="../Host/Sub VIs/Group Data and Triggers for Display 20221121.vi"/>
+			<Item Name="Channel Numbers.ctl" Type="VI" URL="../Host/Enums/Channel Numbers.ctl"/>
 		</Item>
 		<Item Name="Test" Type="Folder" URL="../Host/Test">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -1435,8 +1439,6 @@
 					<Item Name="lvSimController.dll" Type="Document" URL="/&lt;vilib&gt;/rvi/Simulation/lvSimController.dll"/>
 					<Item Name="FxpSim.dll" Type="Document" URL="/&lt;vilib&gt;/rvi/FXPMathLib/sim/FxpSim.dll"/>
 				</Item>
-				<Item Name="ChannelWindowClust.ctl" Type="VI" URL="../Host/Clusts/ChannelWindowClust.ctl"/>
-				<Item Name="AllWindowsClust.ctl" Type="VI" URL="../Host/Clusts/AllWindowsClust.ctl"/>
 			</Item>
 			<Item Name="Build Specifications" Type="Build">
 				<Item Name="Multirecord Acquisition (NI PXIe-5172 8CH 410T)" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
@@ -1521,12 +1523,9 @@ _4)Implemented re-centering trigger for all channels. (Was only channel 0.)</Pro
 				</Item>
 			</Item>
 		</Item>
-		<Item Name="ChannelWindowClust.ctl" Type="VI" URL="../Host/Clusts/ChannelWindowClust.ctl"/>
-		<Item Name="AllWindowsClust.ctl" Type="VI" URL="../Host/Clusts/AllWindowsClust.ctl"/>
 		<Item Name="ProgrammaticBuildBuild.vi" Type="VI" URL="../Host/ProgrammaticBuildBuild.vi"/>
-		<Item Name="Group Data and Triggers for Display 20221121.vi" Type="VI" URL="../Host/Sub VIs/Group Data and Triggers for Display 20221121.vi"/>
-		<Item Name="Channel Numbers.ctl" Type="VI" URL="../Host/Enums/Channel Numbers.ctl"/>
 		<Item Name="Configured Acquisition Trigger (Host)_20230119.vi" Type="VI" URL="../Host/Configured Acquisition Trigger (Host)_20230119.vi"/>
+		<Item Name="Configured Acquisition Trigger (Host)_20230131.vi" Type="VI" URL="../Host/Configured Acquisition Trigger (Host)_20230131.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="instr.lib" Type="Folder">
 				<Item Name="niInstr Multirecord Acquisition v1 Host.lvclass" Type="LVClass" URL="/&lt;instrlib&gt;/_niInstr/Multirecord Acquisition/Interface/v1/Host/niInstr Multirecord Acquisition v1 Host.lvclass"/>
@@ -1739,6 +1738,16 @@ _4)Implemented re-centering trigger for all channels. (Was only channel 0.)</Pro
 				<Item Name="DAQmx Create Channel (AI-Voltage-Custom with Excitation).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Channel (AI-Voltage-Custom with Excitation).vi"/>
 				<Item Name="DAQmx Create Channel (AI-Voltage-Basic).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Channel (AI-Voltage-Basic).vi"/>
 				<Item Name="DAQmx Create Virtual Channel.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Virtual Channel.vi"/>
+				<Item Name="DAQmx Timing.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/timing.llb/DAQmx Timing.vi"/>
+				<Item Name="DAQmx Timing (Sample Clock).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/timing.llb/DAQmx Timing (Sample Clock).vi"/>
+				<Item Name="DAQmx Timing (Handshaking).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/timing.llb/DAQmx Timing (Handshaking).vi"/>
+				<Item Name="DAQmx Timing (Implicit).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/timing.llb/DAQmx Timing (Implicit).vi"/>
+				<Item Name="DAQmx Timing (Use Waveform).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/timing.llb/DAQmx Timing (Use Waveform).vi"/>
+				<Item Name="DAQmx Timing (Change Detection).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/timing.llb/DAQmx Timing (Change Detection).vi"/>
+				<Item Name="DAQmx Timing (Burst Import Clock).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/timing.llb/DAQmx Timing (Burst Import Clock).vi"/>
+				<Item Name="DAQmx Timing (Burst Export Clock).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/timing.llb/DAQmx Timing (Burst Export Clock).vi"/>
+				<Item Name="DAQmx Timing (Pipelined Sample Clock).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/timing.llb/DAQmx Timing (Pipelined Sample Clock).vi"/>
+				<Item Name="DAQmx Wait Until Done.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/task.llb/DAQmx Wait Until Done.vi"/>
 			</Item>
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
