@@ -1,0 +1,616 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Windows-1252">
+<title>Multirecord Acquisition (NI 5170)</title>
+<style>
+
+<!--
+
+/***************************************************/
+
+/* MINIMAL STYLES */
+
+/* The following section defines styles that every HTML Help project should need. */
+
+/* Specifies White Background color */
+
+body {background-color:#FFFFFF; font-family:Verdana, sans-serif; font-size:8pt; color: #000000;}
+
+
+
+/* The default style of P is red to alert you that you need to apply a style class, such as Body. */
+
+P { margin-top:6.00pt; margin-bottom:6.00pt;}
+
+
+
+BR { font-size:4.00pt; }
+
+
+
+/* Use H1 for all topic headings. */
+
+H1 { margin-top:3.00pt; margin-bottom:3.00pt; font-size:150%; font-weight:bold;  }
+
+
+
+/* Use H2 for second-level headings. */
+
+H2 { margin-top:9.00pt; margin-bottom:3.00pt; font-size:125%; font-weight:bold;  }
+
+
+
+/* Use H3 for third-level headings. */
+
+H3 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+
+
+
+/* Use H4 for fourth-level headings. */
+
+H4 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+
+
+
+/* H5 and H6 have the same definition as H4 because you should not need this level of heading in one topic. If you need to use H5 or H6, consider breaking up your topic into more than one topic. */
+
+H5 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+
+H6 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+
+
+
+/* Use the Body style class for normal paragraphs. */
+
+P.Body {  }
+
+
+
+/* Use the Anchor style class for graphic references on a line by themselves. */
+
+P.Anchor { font-size:125%;  }
+
+
+
+/* Use the Indent style classes to indent a paragraph. If you need to indent text below a list item, use <br><br> to start the new paragraph within the same set of <li></li> tags. If you need to indent a list within another list, nest the indented list within the first list's set of <ol></ol> or <ul></ul> tags. */
+
+P.Indent1 { margin-left:12.00pt; margin-bottom:3.00pt;  }
+
+P.Indent2 { margin-left:24.00pt; margin-bottom:3.00pt;  }
+
+P.Indent3 { margin-left:36.00pt; margin-bottom:3.00pt;  }
+
+P.Indent4 { margin-left:48.00pt; margin-bottom:3.00pt;  }
+
+P.Indent5 { margin-left:60.00pt; margin-bottom:3.00pt;  }
+
+
+
+/* Use the LI style for all list items. */
+
+LI { margin-top:3.00pt; margin-bottom:3.00pt; }
+
+
+
+/* Use the OL style for numbered lists. You do not have to type the number for each list item in a numbered list. */
+
+OL { margin-left:22.00pt; margin-top:3.00pt; margin-bottom:3.00pt; text-indent:0pt; list-style-type: decimal; }
+
+
+
+/* Use the OL style for numbered lists. Nested lists will use the bullet types according to the nesting scheme below */
+
+ol ol {list-style-type:lower-alpha}
+
+ol ol ol {list-style-type:decimal}
+
+ol ol ol ol {list-style-type:lower-alpha}
+
+ol ol ol ol ol {list-style-type:decimal}
+
+ol ol ol ol ol ol {list-style-type:lower-alpha}
+
+ol ol ol ol ol ol ol {list-style-type:decimal}
+
+ol ol ol ol ol ol ol ol {list-style-type:lower-alpha}
+
+
+
+
+
+/* Use the EquationNum style class for numbered lists of equations. You do not have to type the number for each list item in a numbered list. */
+
+OL.EquationNum { margin-left:36.00pt; text-indent:0pt; list-style-type: decimal; }
+
+
+
+/* Use the List-abc style class for lettered lists. You do not have to type the letter for each list item in a lettered list. */
+
+OL.List-abc { margin-left:22.00pt; text-indent:0pt; list-style-type:lower-alpha; }
+
+
+
+/* Use the UL style for bulleted lists. You do not have to type the bullet for each list item in a bulleted list. */
+
+UL { margin-left:22.00pt; text-indent:0pt; margin-top:3.00pt; margin-bottom:3.00pt; list-style-type: disc; }
+
+
+
+/* Use the UL style for bulleted lists. Nested lists will use the bullet types according to the nesting scheme below. */
+
+ul ul {list-style-image: none;list-style-type: circle}
+
+ul ul ul {list-style-image:none;list-style-type:disc}
+
+ul ul ul ul {list-style-image: none;list-style-type: circle}
+
+ul ul ul ul ul {list-style-image:none;list-style-type:disc}
+
+ul ul ul ul ul ul {list-style-image: none;list-style-type: circle}
+
+ul ul ul ul ul ul ul {list-style-image:none;list-style-type:disc}
+
+ul ul ul ul ul ul ul ul ul{list-style-image: none;list-style-type: circle}
+
+
+
+/* Use the List-Box style class for bulleted lists with boxes instead of bullets. You do not have to type the box for each list item in a box list. */
+
+UL.List-Box { list-style-image: none;list-style-type: square}
+
+
+
+Table { font-size:100%; }
+
+
+
+/* Use the Borderless style class for tables that do not need borders, such as for 2-column or 3-column lists with no headings. */
+
+Table.Borderless { border:none; }
+
+
+
+/* Use the Bordered style class for tables that need borders. */
+
+Table.Bordered { border-width: 1pt; border-style: solid; border-color: #000000; border-collapse: collapse; }
+
+
+
+/* Use the TD style for table cells in Borderless or Borderless-Wide tables. */
+
+TD { vertical-align:top; padding:3px; }
+
+
+
+/* Use the Bordered style class for table headings and cells in Bordered or Bordered-Wide tables. */
+
+.Bordered { border-width: 1pt; border-style: solid; border-color: #000000; }
+
+
+
+/* Use the Icon style class for table cells that contain note, caution, warning, or tip icons, or LabVIEW datatype terminals. */
+
+TD.Icon { width:40px; }
+
+
+
+/* Use the TH style for table heading cells in Borderless or Borderless-Wide tables. */
+
+TH { font-weight:bold; padding:3px; }
+
+
+
+/* Use the Left-Align style class for table headings and cells that you want to left align instead of center align. */
+
+.Left-Align { text-align:left; }
+
+
+
+/***************************************************/
+
+/* CHARACTER FORMATS */
+
+/* The following section defines character formats that every HTML Help project should need. */
+
+
+
+/* CHARACTER FORMATS Updated to conform with the CSE HTML Validator Pro */
+
+/* The following section defines character formats that every HTML Help project should need. */
+
+
+
+/* Use the Dark-Red format for warnings or cautions. */
+
+.Dark-Red { color: #800000 }
+
+
+
+/* Use the Monospace format for code or syntax examples. */
+
+.Monospace { font-family: Courier New; font-size: 100%; }
+
+
+
+/* Use the Monospace-Bold format for messages and responses that the computer automatically prints to the screen. */
+
+.Monospace-Bold { font-family: Courier New; font-weight: bold; font-size: 100%; }
+
+
+
+/* Use the Monospace-Italic format to denote text that is a placeholder for a word or value that the user must supply. */
+
+.Monospace-Italic { font-family: Courier New; font-style: italic; font-size: 100%; }
+
+
+
+/* small class */
+
+.smallFont { font-size:87.5%; }
+
+
+
+/* Bold class */
+
+.Bold { font-weight: bold; }
+
+
+
+/* Italic class */
+
+.Italic { font-style: italic; }
+
+
+
+/* Use the Platform format to denote a specific platform. */
+
+.Platform { color: #0000FF; font-weight: bold; }
+
+
+
+/* Use the Symbol format for characters not in the Verdana character set. Use this format sparingly. When possible, you should use the correct ASCII code for the symbol or use a graphic to recreate the symbol. */
+
+.Symbol { font-family: Symbol; }
+
+
+
+/* Use the Red-text format to call attention to text that needs  information added or edited by techcomm */
+
+.Red-text {color: #FF0000;}
+
+
+
+/* Use the Green-Underline format for the green defintion in the conventions topic */
+
+.Green-Underline {color: #007700; text-decoration : underline;}
+
+
+
+/* Use the glossButton format for the glossary buttons used in the glossary topic */
+
+.glossButton { font-size:12px; color:black; }
+
+
+
+/* Use for text sections and hyphenated words that should not break at line wraps */
+
+.nobreak{white-space:nowrap}
+
+
+
+/* Use for template instructions. */
+
+.instructions{color:red; font-style:italic}
+
+
+
+/*Use for words and text sections that do not need to be localized */
+
+.DNL { }
+
+
+
+/* The following styles define the color of links. */
+
+a:link { color: #007700 }
+
+a:visited { color: #7F007F }
+
+a:link:hover { color: #FF0000 }
+
+a:link:active { color: #FF0000 }
+
+
+
+/***************************************************
+
+** Forms */
+
+
+
+form { margin-top:0pt; margin-bottom:3pt; color:black; }
+
+select { font-size:100%; color:black; }
+
+
+
+/*******************************************************
+
+** Margins **
+
+** Use these styles for block-level elements inside tables cells or list items where you do not want extra padding at the top or bottom of a cell. */
+
+.noTopMargin { margin-top:0pt;}
+
+.noBottomMargin { margin-bottom:0pt;}
+
+
+
+/***************************************************
+
+** CODE STYLES **
+
+** The following section defines styles that you need to format entire sections of code or syntax examples. If you have just a few words you need to format as a code or syntax example, use the Monospace character format. */
+
+
+
+P.Code { margin-top:3.00pt; margin-bottom:0.00pt; font-family:Courier New;  }
+
+P.Code1 { margin-left:12.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family:Courier New;  }
+
+P.Code2 { margin-left:24.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family:Courier New;  }
+
+P.Code3 { margin-left:36.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family:Courier New;  }
+
+-->
+</style>
+
+<script type="text/javascript"> // define hyperlinks and function for launching a URL in a browser
+
+function WWW(url)
+	{
+	var urlWindow;
+	urlWindow = window.open(url, "New", "directories=yes,location=yes,menubar=yes,resizable=yes,scrollbars=yes,status=yes,toolbar=yes");
+	}
+</script>
+
+</HEAD>
+<body>
+
+<h1>Multirecord Acquisition (NI 5170)</h1>
+
+<p class="Body">The Multirecord Acquisition (NI 5170) sample project provides a basic starting point for acquiring data with NI&nbsp;PXIe-5170R/5171R/5172 reconfigurable oscilloscopes.</p>
+
+<h2>Features</h2>
+<ul>
+	<li>Provides a session-based software interface to open an oscilloscope session; configure hardware, DSP, and trigger settings; and acquire data.</li>
+	<li>Allows the customizable FPGA VI to incorporate application-specific intellectual property (IP) to accelerate test execution speed.</li>
+</ul>
+
+<h2>System Requirements</h2>
+<ul>
+	<li><strong>5170R/5171R Support</strong></li>
+<ul>
+	<li>LabVIEW 2014 (32-bit) Full or Professional Development System or later.</li>
+	<li>NI PXI Express chassis with a NI 5170R/5171R installed. The chassis must either have an embedded PXIe controller or be connected to a host computer with a MXI-Express kit, such as the NI PXIe/PCIe-8375.</li>
+	<li>LabVIEW Instrument Design Libraries for Reconfigurable Oscilloscopes 14.0 or later.</li>
+	<li>(Optional) LabVIEW FPGA Module is required to view, open, and edit the included FPGA VI. If you do not have the LabVIEW FPGA module installed, you can still run this sample project; however, the <strong>Project Explorer</strong> window will show only the host VIs.</li>
+</ul>
+	<li><strong>5172 Support</strong></li>
+<ul>
+	<li>LabVIEW 2016 (32-bit) Full or Professional Development System or later.</li>
+	<li>NI PXI Express chassis with a NI 5172 installed. The chassis must either have an embedded PXIe controller or be connected to a host computer with a MXI-Express kit, such as the NI PXIe/PCIe-8375.</li>
+	<li>LabVIEW Instrument Design Libraries for Reconfigurable Oscilloscopes 16.2.</li>
+	<li>(Optional) LabVIEW FPGA Module is required to view, open, and edit the included FPGA VI. If you do not have the LabVIEW FPGA module installed, you can still run this sample project; however, the <strong>Project Explorer</strong> window will show only the host VIs.</li>
+</ul>
+</ul>
+
+<p class="Body"><strong>Note</strong>&nbsp;&nbsp;Refer to the <em>NI LabVIEW Instrument Design Libraries for Reconfigurable Oscilloscopes Readme</em> for additional system requirements.</p>
+
+
+<h2>Overview</h2>
+
+<p class="Body">This sample project consists of four host VIs, which run on the host computer, and an FPGA VI, which runs on the FPGA within the device hardware. Each host VI instructs the FPGA VI on how to acquire data. The FPGA VI acquires data from the device input port.</p>
+
+<p class="Body">You can run this sample project without installing the LabVIEW FPGA Module. however, you must install the LabVIEW FPGA Module to view, open, and edit the FPGA VI.</p>
+
+<h3>Host VIs</h3>
+
+<p class="Body">In the <strong>Project Explorer</strong> window, expand <strong>My Computer</strong> to see the following host VIs:</p>
+
+<ul>
+	<li><strong>Configured Acquisition (Host).vi</strong>&#8212;Acquires a single record data continuously.</li>
+
+	<li><strong>Configured Acquisition Trigger(Host).vi</strong>&#8212;Acquires data conditioned on the following trigger configurations:
+<ul>
+	<li><strong>Immediate</strong>: Acquisition is triggered as soon as the number of specified pre&#8212;trigger samples are acquired.</li>
+	<li><strong>A</strong> (Edge Trigger, Level Trigger): Acquisition is triggered on source A when the criteria for selected trigger type for instance A are met.</li>
+	<li><strong>B</strong> (Edge Trigger, Level Trigger): Acquisition is triggered on source B when the criteria for selected trigger type for instance B are met.</li>
+	<li><strong>OR</strong> (Edge Trigger, Level Trigger): Acquisition is triggered on source A or B when the criteria for selected trigger type for instance A or B are met.</li>
+	<li><strong>AND</strong> (Edge Trigger, Level Trigger): Acquisition is triggered on source A or B when the criteria for selected trigger type for instance A as well as B are met.</li>
+	<li><strong>A THEN B</strong> (Edge Trigger, Level Trigger): Acquisition is triggered on source B when the criteria for selected trigger type for instance A followed by instance B are met.</li>
+	<li><strong>B THEN A</strong> (Edge Trigger, Level Trigger): Acquisition is triggered on source A when the criteria for selected trigger type for instance B followed by instance A are met.</li>
+	<li><strong>High Resolution</strong> (Edge Trigger, instance A only): Acquisition is triggered on source A with sub-sample accuracy.</li>
+</ul>
+</li>
+
+	<li><strong>External Clocking (Host).vi</strong>&#8212;Acquires data with external clock as the reference clock source.</li>
+	<li><strong>Multiple Record Fetch (Host).vi</strong>&#8212;Acquires multiple records of data.</li>
+</ul>
+
+<h3>Instrument Design Libraries</h3>
+<p class="Body">If you have the LabVIEW FPGA Module installed, you can open the FPGA VI, which is visible in the <strong>Project Explorer</strong> window at <strong>&lt;<em>Device Name</em>&gt;&#0187;Multirecord Acquisition (FPGA).vi</strong>. This VI was created using several instrument design libraries. Each instrument design library consists of VIs that facilitate three aspects of programming the FPGA:</p>
+
+<ul>
+	<li>Register bus&#8212;The communication channel that performs the following tasks:
+		<ul>
+			<li>Allows direct reading and writing of the device registers</li>
+			<li>Arbitrates between instrument design libraries that require access to the same registers</li>
+		</ul>
+	</li>
+	<li>FPGA resources&#8212;Memory, I/O, FIFOs, registers, and other resources that are dedicated to a particular instrument design library task.</li>
+	<li>Process&#8212;VIs that execute the task specific to a particular instrument design library.</li>
+</ul>
+
+<p class="Body">You can see the instrument design libraries in the <strong>Project Explorer</strong> window by expanding the <strong>Dependencies&#0187;instr.lib</strong> project item. For example, the following screenshot shows some of the VIs in the Multirecord Acquisition instrument design library.</p>
+
+<img src="images/loc_multirecord_acquisition_design_library.png" alt="Multirecord Acquisition Design Library">
+
+<p class="Body">The Multirecord Acquisition instrument design library acquires data from the input connected to the device. The FPGA VI implements all aspects of this instrument design library (register bus, FPGA resources, process) in the following locations:</p>
+
+<ul>
+	<li>Register bus&#8212;<span class="Monospace">niInstr FIFO Register Bus v1 FPGA.lvclass:Host Interface.vi</span> is located in the Register Bus Loop section.</li>
+	<li>FPGA resources&#8212;<span class="Monospace">niInstr Multirecord Acquisition Common v1 FPGA.lvclass:Create Resources DRAM U384x2 U768 Write Read.vi</span> is located in the Create Acquisition Resources section.</li>
+	<li>Process&#8212;<span class="Monospace">niInstr Multirecord Acquisition Common v1 FPGA.lvclass:Process.vi</span></li>
+</ul>
+
+<p class="Body">Code in the Acquisition Loop section uses <span class="Monospace">niInstr Multirecord Acquisition v1 FPGA.lvclass:Write I16 Wrapper.vi</span>, which writes the acquired samples into memory, conditioned on the trigger.</p>
+
+<p class="Body">Code in the Fetch Loop section uses <span class="Monospace">niInstr Multirecord Acquisition v1 FPGA.lvclass:Retrieve Record U16 Wrapper.vi</span> and <span class="Monospace">niInstr Multirecord Acquisition v1 FPGA.lvclass:Write to Fetch DMA FIFO U16 Wrapper.vi</span> to retrieve the data, write to the Fetch DMA FIFO and transmit it to the fetch VIs on the host.</p>
+
+<p class="Body">In addition to the Multirecord Acquisition instrument design library, this sample project demonstrates the usage of the following instrument design libraries:</p>
+
+<ul>
+	<li>Configuration&#8212;Configures the device hardware.</li>
+	<li>Data Trigger&#8212;Generates triggers based on the input signal.</li>
+	<li>DSP&#8212;Processes data using common digital signal processor (DSP) algorithms.</li>
+	<li>Register Bus&#8212;Sends register read and write instructions from your application on the host to the FPGA.</li>
+</ul>
+
+<p class="Body">When you are programming the NI&nbsp;5170R/5171R/5172, access the instrument design libraries in the following palette locations:</p>
+
+<ul>
+	<li>Host VIs:
+	<table class="Borderless">
+		<tr>
+			<th>Functions&#0187;FPGA Interface&#0187;Software-Designed Instruments&#0187;Oscilloscopes&#0187;NI PXIe-5170R</th>
+			<th>Functions&#0187;FPGA Interface&#0187;Software-Designed Instruments&#0187;Oscilloscopes&#0187;NI PXIe-5171R</th>
+			<th>Functions&#0187;FPGA Interface&#0187;Software-Designed Instruments&#0187;Oscilloscopes&#0187;NI PXIe-5172</th>
+		</tr>
+		<tr>
+		<td><img src="images/loc_design_library_5170r.png" alt="NI PXIe-5170R Host Palette"></td>
+		<td><img src="images/loc_design_library_5171r.png" alt="NI PXIe-5171R Host Palette"></td>
+		<td><img src="images/loc_design_library_5172.png" alt="NI PXIe-5172 Host Palette"></td>
+		</tr>
+	</table>
+	</li>
+
+	<li>FPGA VIs:
+	<table class="Borderless">
+		<tr>
+			<th>Functions&#0187;NI PXIe-5170R</th>
+			<th>Functions&#0187;NI PXIe-5171R</th>
+			<th>Functions&#0187;NI PXIe-5172</th>
+		</tr>
+		<tr>
+		<td><img src="images/loc_5170r_palette.png" alt="NI PXIe-5170R FPGA Palette"></td>
+		<td><img src="images/loc_5171r_palette.png" alt="NI PXIe-5171R FPGA Palette"></td>
+		<td><img src="images/loc_5172_palette.png" alt="NI PXIe-5172 FPGA Palette"></td>
+		</tr>
+	</table>
+	</li>
+</ul>
+
+
+<h3>FPGA VI Design</h3>
+
+<p class="Body">The FPGA VI acquires data from the input port using the Multirecord Acquisition instrument design library to acquire data from the input port and store it in onboard memory.</p>
+
+<p class="Body">The following five loops run in parallel in the FPGA VI:</p>
+<ul>
+	<li><strong>Register Bus</strong>
+   <ul>
+      <li>Configures the FPGA communication channels for data acquisition using an instance of the Register Bus instrument design library.</li>
+   </ul>
+	<li><strong>Acquisition Loop</strong>
+	<ul>
+		<li>Reads acquired data from analog-to-digital converters (ADCs) and applies digital correction.</li>
+		<li>Processes this data using the DSP instrument design library.</li>
+		<li>Using the data, generates triggers which are used by the Multirecord Acquisition instrument design library.</li>
+		<li>Stores data in DRAM using the Multirecord Acquisition instrument design library.</li>
+	</ul>
+	</li>
+	<li><strong>Fetch Loop</strong>
+	<ul>
+		<li>Retrieves data stored in DRAM by the acquisition loop using the Multirecord Acquisition instrument design library.</li>
+		<li>Sends this data to the host computer through a DMA channel.</li>
+	</ul>
+</ul>
+
+<h2>Running this Sample Project</h2>
+<ol>
+    <li>Ensure all hardware is set up and visible in NI Measurement &amp; Automation Explorer (MAX). Record the resource names of all NI&nbsp;5170R/5171R/5172 devices; you will need these names later.</li>
+    <li>Connect an arbitrary waveform generator or other appropriate equipment to the input port using high-quality X-to-SMA cables.</li>
+    <li>In the <strong>Project Explorer</strong> window, open a host VI, such as <span class="Monospace">Configured Acquisition Trigger(Host).vi</span>.</li>
+    <li>In the <strong>RIO Device</strong> pull-down menu, specify the resource name of the device that you identified in step&nbsp;1.</li>
+    <li>Click <strong>Run</strong>. The device begins acquiring.</li>
+    <li>Click <strong>Stop</strong>.</li>
+    <li>Experiment with different values for the front panel controls and click <strong>Run</strong>. You also can open one of the other host VIs.<br>
+<p class="Body"><strong>Note</strong>&nbsp;&nbsp;Error handling in the instrument design libraries differs from error handling in NI-SCOPE driver software. Less error checking occurs in the instrument design libraries. For example, entering a value that is out of range may not result in an error. You can create custom error codes using the sample project error handlers, as described in the following section.</p></li>
+</ol>
+
+<h2>Modifying this Sample Project</h2>
+<p class="Body"><span class="Monospace">Device Session.lvclass</span> is an aggregation of the instrument design libraries and can be customized to suit your application requirements. The following sections describe common modifications you can make to the FPGA VI. You must install the LabVIEW FPGA Module to access the FPGA VI. With this module installed, launch the FPGA VI from the <strong>Project Explorer</strong> window by opening <strong>My Computer&#0187;&lt;<em>Device Name</em>&gt;&#0187;Multirecord Acquisition (FPGA).vi</strong>. This code is user-owned, namespaced by the created project's name, and can be customized.</p>
+<h3>Adding Custom Triggering</h3>
+<p class="Body">You can add custom triggering code in the Acquisition Loop section. In this section, triggering occurs after the DSP block. Trigger.vi is designed to generate triggers using two-channel source combinations. This VI can be modified to accept more than two channels. You can also add a custom trigger type not already provided by the Data Trigger instrument design library.  You can also add additional trigger combination logic. This will require the Trigger Combination Type enum to be updated. To do so, open this enum from the <strong>Project Explorer</strong> window by selecting <strong>My Computer&#0187;FPGA Interface Typedefinitions.lvlib&#0187;Trigger Combination Type.ctl</strong> and add the new combination logic case to it. Any changes to the trigger logic can affect the delay in data path on the FPGA.</p>
+<h3>Adding Custom DSP Code</h3>
+<p class="Body">You can add custom DSP code in the appropriate locations in the Acquisition Loop section. Place custom DSP code after the Digital Correction VI, which contains code for the digital correction filter. You can also add custom DSP code in the Fetch Loop section, between the Retrieve Record VI and the Write to Fetch DMA FIFO VI. Any changes to the DSP logic can affect the delay in data path on the FPGA.</p>
+
+<h3>Using Digital I/O</h3>
+<p class="Body">Digital I/O lines can be added as follows:</p>
+<ul>
+   <li>You can use either <strong>PFI</strong> or <strong>PXI</strong> lines for digital I/O.
+   <ul>
+      <li>To add a <strong>PXI</strong> line from the <strong>Project Explorer</strong> window, right-click the device name and select <strong>New&#0187;FPGA I/O</strong>, then select the desired PXI line from the <strong>New FPGA I/O</strong> window.</li>
+      <li><strong>PFI</strong> lines are already present in the <strong>Project Explorer</strong> window under <strong>My Computer&#0187;&lt;<em>Device Name</em>&gt;&#0187;Resources&#0187;Trigger and Digital&#0187;&lt;<em>PFI Line</em>&gt;</strong>.
+   </ul>
+	<li>To create an FPGA I/O Node for a line, drag the line to the block diagram of the FPGA VI.</li>
+</ul>
+
+<p class="Body"><strong>Note</strong>&nbsp;&nbsp;For more information about using PXI and PFI lines, refer to the <em>NI Reconfigurable Oscilloscopes Help</em>.</p></li>
+
+<p class="Body">NI recommends designing and testing digital I/O code before integrating it with your main application code.</p>
+
+<h3>Adding Custom Error Codes</h3>
+<p class="Body">You can add custom error codes for <span class="Monospace">Device Session.lvclass</span>. Complete the following steps to add a custom error code:</p>
+<ol>
+   <li>From the <strong>Project Explorer</strong> window, select <strong>View&#0187;Functions Palette</strong>.</li>
+   <li>In the <strong>Functions</strong> palette, select <strong>Programming&#0187;Dialog &amp; User Interface</strong>. Drag an <strong>Error Ring</strong> to the VI to add it.</li>
+   <li>Click on the <strong>Error Ring</strong> and select <strong>Custom Error Code</strong> from the <strong>Error Code Range</strong> drop-down menu. Enter an appropriate <strong>Error Code</strong> and <strong>Error Description</strong>. Make sure that the <strong>Error Code</strong> does not overwrite an existing code.
+</ol>
+
+<h2>Where to Go from Here</h2>
+
+<p class="Body">For more information about using the NI&nbsp;5170R/5171R/5172, refer to the <em>NI Reconfigurable Oscilloscopes Help</em>, which is included with the instrument design library installation. You can also find this document at <a href="http://ni.com/manuals">ni.com/manuals</a>.</p>
+
+<hr>
+<h2>Important Information</h2>
+<!--Copyright-->
+<p class="Body"><strong>Copyright</strong></p>
+<p class="Body">&#0169; 2014 National Instruments. All rights reserved.</p>
+
+<p class="Body">Under the copyright laws, this publication may not be reproduced or transmitted in any form, electronic or mechanical, including photocopying, recording, storing in an information retrieval system, or translating, in whole or in part, without the prior written consent of National Instruments Corporation.</p>
+
+<p class="Body">National Instruments respects the intellectual property of others, and we ask our users to do the same.  NI software is protected by copyright and other intellectual property laws.  Where NI software may be used to reproduce software or other materials belonging to others, you may use NI software only to reproduce materials that you may reproduce in accordance with the terms of any applicable license or other legal restriction.</p>
+
+<p class="Body"><strong>End-User License Agreements and Third-Party Legal Notices</strong></p>
+<p class="Body">You can find end-user license agreements (EULAs) and third-party legal notices in the following locations:</p>
+<ul>
+<li>Notices are located in the <span class="Monospace">&lt;National Instruments&gt;\_Legal Information</span> and <span class="Monospace">&lt;National Instruments&gt;</span> directories.</li> 
+<li>EULAs are located in the <span class="Monospace">&lt;National Instruments&gt;\Shared\MDF\Legal\license</span> directory.</li>
+<li>Review <span class="Monospace">&lt;National Instruments&gt;\_Legal Information.txt</span> for information on including legal information in installers built with NI products.</li>
+</ul>
+
+<!--Trademarks-->
+<p class="Body"><strong>Trademarks</strong></p>
+
+<p class="Body"><span class="DNL">LabVIEW</span>, <span class="DNL">National Instruments</span>, <span class="DNL">NI</span>, <span class="DNL">ni.com</span>, the <span class="DNL">National Instruments</span> corporate logo, and the Eagle logo are trademarks of <span class="DNL">National Instruments Corporation</span>. Refer to the <em><span class="DNL">Trademark Information</span></em> at <span class="Monospace">ni.com/trademarks</span> for other <a href="javascript:WWW(L_trademarks)"><span class="DNL">National Instruments</span> trademarks</a>.</p>
+
+<p class="Body">Other product and company names mentioned herein are trademarks or trade names of their respective companies.</p>
+
+<!--Patents-->
+<p class="Body"><strong>Patents</strong></p>
+<p class="Body">For patents covering the National Instruments products/technology, refer to the appropriate location: <strong>Help&#0187;Patents</strong> in your software, the <span class="Monospace">patents.txt</span> file on your media, or the <a href="javascript:WWW(L_patents)">National Instruments Patent Notice</a> at <span class="Monospace">ni.com/patents</span>.</p>
+</body>
+</html>
